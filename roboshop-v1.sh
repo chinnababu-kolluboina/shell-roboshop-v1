@@ -12,7 +12,7 @@ do
     instance_id=$(aws ec2 run-instances \
             --image-id $ami_id \
             --instance-type $instance_type \
-            --security-group-ids sg-07444bee76bda9dac sg-08f4d65e22ae10d06 \
+            --security-group-ids sg-07444bee76bda9dac sg-0e66ad2dc62a2e1fb \
             --tag-specifications "ResourceType=instance,Tags=[{Key=Name,Value=$instance}]" \
             --query 'Instances[0].InstanceId' \
             --output text
